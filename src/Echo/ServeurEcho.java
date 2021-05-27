@@ -1,7 +1,7 @@
 package Echo;
 
 import java.net.DatagramPacket;
-        import java.net.DatagramSocket;
+import java.net.DatagramSocket;
 
 public class ServeurEcho {
     final static int port = 8532;
@@ -17,7 +17,6 @@ public class ServeurEcho {
             socket.receive(data);
 
             String msg = new String(data.getData());
-//            System.out.println(msg);
             String msgToSend = msg.split(""+CHAR_SEPARATEUR)[0];
             System.out.println("message :" + msgToSend);    // traitement + affichage
 

@@ -1,10 +1,12 @@
 package Concurent;
 
 import java.io.IOException;
-import java.net.*;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 import java.util.Scanner;
 
-public class ClientConcurent {
+public class ClientConcurent2 {
 
     final static int taille = 1024;
     static byte[] buffer;

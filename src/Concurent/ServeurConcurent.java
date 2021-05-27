@@ -4,15 +4,18 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.SocketException;
+import java.util.HashMap;
+
+import Tools.Tool;
 
 public class ServeurConcurent extends Thread{
 
-    final static int PORT = 8532;
+    static int PORT = 8533;
     final static String MESSAGE_FIN_SERVEUR = "OK terminer";
     final static String MESSAGE_SERVEUR = "OK";
     final static String MESSAGE_CONNEXION = "Connexion";
     final static String MESSAGE_CONNEXION_REFUSE = "Connexion refusé";
-    DatagramSocket socket;
+    private DatagramSocket socket;
     final static int taille = 1024;
     static byte[] buffer = new byte[taille];
     final static char CHAR_SEPARATEUR = 'µ';
